@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+		<title> Le Grand Makhlouf </title>
+        <link rel="icon" href="/home/makhlouf/Bureau/GoMycode/checkpointhtml/Capture d’écran du 2024-07-19 13-45-34.png">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+       
+  </head>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      min-height: 100vh;
+      background-color: seagreen;   
+      background: url(/home/makhlouf/Bureau/GoMycode/checkpointhtml/d10ec7f073bcbfd26ccd6fbf826e4498.jpg);
+    }
+    .wrapper{
+      width: 420px;
+      background-color: purple;
+      color: #fff;
+    }
+    .wrapper h1{
+      font-size: 36px;
+      text-align: center;
+    }
+    .wrapper .input-box{
+      width: 100px;
+      height: 50px;
+      margin: 30px 0;
+    }
+    .input-box input{
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none; 
+      border: 2px solid rgba(255,255,255,2);   
+      border-radius: 40px; 
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <form name="loginForm" onsubmit="return validateForm(event) ">
+    <h1>Login Page</h1>
+    <div class="input.box-">
+    <input type="text" name="name" placeholder="Username">
+    <i class='bx bxs-user'></i>
+  </div>
+    <div class="input.box-">
+      <input type="password" name="password" placeholder="Password">
+      <i class='bx bxs-lock-alt' ></i>
+    </div>
+    <div class="remember-forgot">
+     <label> <input type="checkbox">Remeber me</label>
+    </div>
+    <button type="submit" class="btn1" id="myButton">Login</button>
+    </form>
+    </div>
+  </body>
+  <script>
+    function validateForm(e) {
+      e.preventDefault()
+      var name = document.loginForm.name.value
+      var password = document.loginForm.password.value
+     if (name.length==0)
+      return alert(`name is required`)
+     if (password.length<5)
+      return alert(`password length should more than 5`)
+    
+      document.getElementById('myButton').addEventListener('click', function() {
+        window.location.href = 'index.html'
+    });
+    
+     }
+     </script>
+     
+
+
+
+  </form>
+</body>
